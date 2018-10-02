@@ -4,7 +4,6 @@ For each item in the food list, add the price of that item to total.
 Finally, return the total.
 Ignore whether or not the item you're billing for is in stock.Note that your function should work for any food list."""
 
-# Write your code below!
 shopping_list = ["banana", "orange", "apple"]
 
 stock = {
