@@ -21,6 +21,7 @@ prices = {
 }
 
 
+# TODO: Returns 7.5 instead of 2 ???
 def compute_bill(food):
     total = 0
     for x in prices:
@@ -30,3 +31,11 @@ def compute_bill(food):
             total += prices[x]
     print(total)
     return total  # Returns 7.5 instead of 2 ???
+
+
+"""def compute_bill(food):
+  total = 0
+  for item in food:
+    if stock[item] > 0:
+      total = total + prices[item]
+  return total"""
