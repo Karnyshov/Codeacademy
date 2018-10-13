@@ -28,6 +28,7 @@ ship_col = random_col(board)
 #print(ship_col)
 
 # TODO: refactor print of turn
+# TODO: Add multiple ships, user's board, AA choices
 for turn in range(4):
     print("Turn", turn + 1)
     guess_row = int(input("Guess Row: "))
