@@ -1,3 +1,4 @@
+# Original
 def anti_vowel(text):
     text_new = text
     for x in text:
@@ -7,6 +8,7 @@ def anti_vowel(text):
     return text_new
 
 
+# Refactored
 def anti_vowel1(text):
     final = ""
     vowel = "aeiouAEIOU"

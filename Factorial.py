@@ -7,6 +7,7 @@ def factorial(n):
         return n * factorial(n - 1)
 
 
+# Refactored
 def factorial1(x):
     total = 1
     while x > 0:
@@ -16,6 +17,7 @@ def factorial1(x):
     return total
 
 
+# Original
 def factorial2(m):
     if m == 0:
         return 1

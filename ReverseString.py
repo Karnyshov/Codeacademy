@@ -2,6 +2,7 @@ def reverse(s):
     return "".join([s[x] for x in range(-1, (-len(s)-1), -1)])
 
 
+# Original
 def reverse1(text):
     new = ""
     for x in range(-1, (-len(text)-1), -1):
