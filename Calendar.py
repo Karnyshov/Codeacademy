@@ -15,32 +15,31 @@ def welcome():
 
     print("What would you like to do?")
 
-# TODO: Refactor for Python 3
+# TODO: Refactor else statement for invalid command
 def start_calendar():
     welcome()
     start = True
     while start:
-        user_choice = raw_input("A to Add, U to update, V to View, D to Delete, X to Exit: ")
+        user_choice = input("A to Add, U to update, V to View, D to Delete, X to Exit: ")
         user_choice = user_choice.upper()
 
         if user_choice == "V":
             if calendar.keys() == 0:
                 print("No events in Calendar!")
             else:
-                print
-                calendar
+                print(calendar)
         elif user_choice == "U":
-            date = raw_input("What date? ")
-            update = raw_input("Enter the update: ")
+            date = input("What date? ")
+            update = input("Enter the update: ")
             calendar[date] = update
             print("Updated successfully")
             print(calendar)
         elif user_choice == "A":
-            event = raw_input("Enter the event: ")
-            date = raw_input("Enter date (MM/DD/YYYY): ")
+            event = input("Enter the event: ")
+            date = input("Enter date (MM/DD/YYYY): ")
             if len(date) > 10 or int(date[6:]) < int(strftime("%Y")):
                 print("Wrong date!")
-                try_again = raw_input("Try again? Y for Yes, N for No: ")
+                try_again = input("Try again? Y for Yes, N for No: ")
                 try_again = try_again.upper()
                 if try_again == "Y":
                     continue
@@ -54,7 +53,7 @@ def start_calendar():
             if calendar.keys() == 0:
                 print("Calendar is already empty!")
             else:
-                event = raw_input("What event?")
+                event = input("What event?")
                 for date in calendar.keys():
                     if calendar[date] == event:
                         del calendar[date]
@@ -67,6 +66,7 @@ def start_calendar():
             print("Exiting program")
         else:
             print("Invalid command! Exiting the program...")
+            start = False
 
 
 start_calendar()
